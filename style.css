@@ -1,0 +1,168 @@
+.main div, .main input, .main select, .main{  /* значения по умолчанию */
+    display: flex;  /* включили гибкое форматирование */
+}
+ /*1   */
+.main, .section,  .centre{
+	flex-direction: column; /* направление главнеой оси в ряд*/
+}
+ /*2   */
+.content, .article>.line{
+    justify-content: space-around; /* распределение содержимого  по главной оси */ 
+}
+.main, .title,  .section>div, .centre>div[data-line]{
+    justify-content: center; /* распределение содержимого  по главной оси */ 
+}
+.centre>div[data-line]>div{
+    justify-content: flex-end; /* распределение содержимого  по главной оси */ 
+}
+ .table>.line{
+    justify-content: space-between;     
+ }
+
+ /*3 */
+.content{
+    align-items:flex-start  ; /* выравнивание в поперечной оси */  
+}
+.centre>div[data-display]{
+    align-items:center ; /* выравнивание в поперечной оси */   
+}
+
+ /*4 */
+.g{
+    flex-grow: 1;  
+}
+
+.content{
+    flex-wrap:nowrap; /* перенос блоков */ 
+}
+
+.centre{
+    flex-basis: 60em; 
+}
+.section{
+    flex-basis: 20em; 
+} 
+
+/* ----------------   flax  -------------- */
+.mine {
+    width:100%;
+    overflow:auto;
+}
+
+
+
+/*5 */
+.centre input {
+	margin: 0px;
+	padding: 5px;
+}
+.centre>div[data-line]>*{
+	margin: 1px;
+	padding: 5px 15px;
+}  
+.section>div, .main>.top{
+	margin: auto;	
+}
+.main>.top{
+	padding: 15px;
+}
+/*5 */
+div, input, select{
+    font-size:  20px;    
+    font-family:  serif;  
+}
+
+.top{
+    font-size:  1.4em;  
+}  
+
+.centre>div[data-line]>div{
+    flex-basis: 8em;
+}
+.centre>div[data-line]>input{
+    flex-basis: 25em;
+}
+
+select[data-id="domain_select"]{
+	flex-basis: 25ex;
+}
+
+input::placeholder {
+    color: rgb(120, 120, 120);
+    opacity:0.7;
+}
+input:hover{
+	 /*width: 10ex;*/
+	 background-color: white;
+}
+
+
+input{
+    max-width:var(--max_width_input);
+    max-height:2em;
+    background-color:rgba(205, 214, 219, 0);
+    border:none;
+}
+
+select{
+    background-color:rgba(205, 214, 219, 0);
+    border:none;
+    text-align: center;
+    appearance: none;
+}
+
+
+.page_name{
+    font-size:  30px;
+	text-align: center;
+	padding: 20px;
+}
+
+/*10 animation*/
+.menu div[data-choose='1']{
+    background-color: rgb(255, 2550, 255);    
+}
+div[data-click]:hover {
+    background-color: rgb(200, 200, 200);
+}
+div[data-click]{
+    border-style: outset;
+    user-select: none;
+    border-radius: 10px; 
+	padding: 5px 10px; 	
+}
+div[data-click]:active {
+    border-style:inset;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.menu>div, .section>div{
+	margin:7px 10px;
+	padding:7px 10px;
+}
+
+
+body{
+    background: url(fon.jpg) repeat; /* Параметры фона */  
+    background-position:  var(--position_fon) 0;
+    transition: 5s; /* время трансформации*/
+}
+
+
+div[data-click='send'] {
+    background: url(png/send.png) no-repeat;
+}
+div[data-click='save'] {
+    background: url(png/user.png) no-repeat;
+}
+div[data-click='out'] {
+    background: url(png/out.png) no-repeat;
+}
+
+div[data-click] {
+  width: 2em;
+  height: 2em;
+  background-size: 70%;
+  background-position: center;
+}
