@@ -79,12 +79,8 @@ div, input, select{
 .centre>div[data-line]>div{
     flex-basis: 8em;
 }
-.centre>div[data-line]>input{
+.centre>div[data-line]>input, .centre>div[data-line]>select {
     flex-basis: 25em;
-}
-
-select[data-id="domain_select"]{
-	flex-basis: 25ex;
 }
 
 input::placeholder {
@@ -107,7 +103,7 @@ input{
 select{
     background-color:rgba(205, 214, 219, 0);
     border:none;
-    text-align: center;
+    /*text-align: center;*/
     appearance: none;
 }
 
