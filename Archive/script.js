@@ -19,7 +19,7 @@ let comm={
 		req.open('POST', url, true);
 		//req.setRequestHeader('Content-Type', 'multipart/form-data');//'application/json');
 		//req.setRequestHeader('Content-Type', 'application/json');
-		//req.setRequestHeader('Content-Type', 'multipart/form-data');
+		
 		
 		req.responseType = 'text';
 		req.send(form);
@@ -103,7 +103,7 @@ let control={
 		}
         let file=document.querySelector('.centre>select');
         ab.append('file', myfile.files[0]);
-        url='';
+        url='php/ax.php';
 		comm.ax(ab, url);
 	},
 
