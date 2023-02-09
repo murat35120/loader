@@ -31,7 +31,7 @@ const server = http.createServer((req, res) => {
 		var form = new multiparty.Form();
 
 		form.parse(req, function(err, fields, files) {
-			//console.error(files.file[0]);
+			console.error(files.file[0]);
 			if(files.file[0].path){
 				fs.readFile(files.file[0].path, (err, fd) => {
 					let new_name='./files/'+path.basename(files.file[0].originalFilename);
